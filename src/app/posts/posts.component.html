@@ -1,1 +1,21 @@
-<!-- <div *ngFor="" -->
+<div *ngFor="let post of this.thread.posts">
+  <!-- <div *ngIf="post.id === 0">
+
+  </div>
+  <div *ngIf="post.id != 0">
+
+  </div> -->
+  <div class="post">
+    <div class="post-info">
+      <div class="post-author">
+        {{post.data.author}}
+      </div>
+      <div class="post-date">
+        {{post.data.date}}
+      </div>
+    </div>
+    <div class="post-message">
+      <p>{{post.data.message}}</p>
+    </div>
+  </div>
+</div>
