@@ -4,16 +4,10 @@
   border: 1px solid #666;
   border-radius: 4px;
   margin-bottom: 20px;
+  background-image: linear-gradient(white,#ddd);
   /*font-weight: 800;*/
 }
 
-.post:nth-child(odd) {
-  background-image: linear-gradient(white,#ddd);
-}
-
-.post:nth-child(even) {
-  background-image: linear-gradient(red,#aaa);
-}
 
 .post-message {
   /*flex-grow: 1;*/
@@ -39,6 +33,18 @@
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
+}
+
+.button {
+  border-radius: 3px;
+  border: 1px solid #666;
+  padding: 20px;
+  background-image: linear-gradient(#538cc6,#369);
+  color: white;
+}
+.button:hover {
+  background-image: linear-gradient(#369,#036);
+
 }
 
 

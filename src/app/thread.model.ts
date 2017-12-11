@@ -47,7 +47,7 @@ export class Thread {
 
   data: Object;
   id: number;
-  posts: Object[];
+  posts: Object[] = [];
 
   static find(id) {
     return Thread.allThreads[id];
@@ -58,7 +58,6 @@ export class Thread {
     if (threadData.placeholder) {
       this.save();
       this.posts = Thread.PlaceHolderPosts[this.id];
-
     }
   }
 
@@ -68,9 +67,21 @@ export class Thread {
   }
 
   makePost(postData) {
-    this.posts.push({
+    console.log(this)
+    let newPost = {
       id: this.posts.length,
       data: postData
-    });
+    }
+    this.posts.push(newPost);
+    return newPost;
+  }
+
+  findPost(id) {
+    try {
+      return this.posts[id];
+    }
+    catch(err) {
+      return null;
+    }
   }
 }

@@ -21,7 +21,6 @@ export class PostsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.thread = Thread.find(this.id);
-    console.log(this.thread);
   }
 
   ngOnDestroy() {

@@ -1,3 +1,6 @@
-<p>
-  post-form works!
-</p>
+<div class="post-form">
+  <input [(ngModel)]="author" class="input" type="text" placeholder="Author"><br>
+  <input *ngIf="!threadId" [(ngModel)]="title" class="input" type="text" placeholder="Title"><br>
+  <textarea [(ngModel)]="message" class="input input-big" type="text" placeholder="Message" resize=false></textarea>
+</div>
+<button (click)="submitPost()">Submit (to me!)</button>
