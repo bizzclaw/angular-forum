@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MarketplaceComponent } from './marketplace.component';
+import { ThreadsComponent } from './threads.component';
 
-describe('MarketplaceComponent', () => {
-  let component: MarketplaceComponent;
-  let fixture: ComponentFixture<MarketplaceComponent>;
+describe('ThreadsComponent', () => {
+  let component: ThreadsComponent;
+  let fixture: ComponentFixture<ThreadsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MarketplaceComponent ]
+      declarations: [ ThreadsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MarketplaceComponent);
+    fixture = TestBed.createComponent(ThreadsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

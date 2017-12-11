@@ -7,14 +7,14 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
-import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { ThreadsComponent } from './threads/threads.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    MarketplaceComponent
+    ThreadsComponent
   ],
   imports: [
     BrowserModule,

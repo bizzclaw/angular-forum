@@ -1,8 +1,8 @@
-import { ModuleWithProviders }  from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
-import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { ThreadsComponent } from './threads/threads.component';
 
 const appRoutes: Routes = [
   {
@@ -14,8 +14,8 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'marketplace',
-    component: MarketplaceComponent
+    path: 'threads',
+    component: ThreadsComponent
   }
 ];
 
