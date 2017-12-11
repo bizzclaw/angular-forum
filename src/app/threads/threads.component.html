@@ -1,3 +1,13 @@
-<p>
-  marketplace works!
-</p>
+<div class="thread" *ngFor="let thread of threads">
+    <div class="thread-title">
+      <a [routerLink]="['/posts', thread.id]">{{thread.data.title}}</a>
+    </div>
+    <div class="thread-info">
+      <div class="thread-author">
+        <p><span class="light">Author:</span> {{thread.posts[0].data.author}}</p>
+      </div>
+      <div class="thread-date">
+        <p><span class="light">Date:</span> {{thread.posts[0].data.date}}</p>
+      </div>
+    </div>
+</div>

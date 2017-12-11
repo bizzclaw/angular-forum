@@ -1,0 +1,42 @@
+.thread {
+  display: flex;
+  border: 1px solid #666;
+  border-radius: 4px;
+  /*padding: 20px;*/
+  background-image: linear-gradient(white,#ddd);
+  margin-bottom: 20px;
+  font-weight: 800;
+  /*transition: all 1500ms ease;*/
+}
+
+.thread:hover {
+  background-image: linear-gradient(#eee,#aaa);
+  cursor: pointer;
+  color: black;
+
+}
+
+.thread-title {
+  width: 80%;
+  padding: 20px;
+  font-size: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  /*border: 1px solid red;*/
+}
+
+.thread-info {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+.thread-author {
+}
+
+.light {
+  font-weight: 200;
+}
