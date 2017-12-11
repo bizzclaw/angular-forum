@@ -1,63 +1,73 @@
 export class Thread {
-  static allThreads = [
-    {
-      id: 0,
-      data: {
-        category: 0,
-        title: 'Sup?'
-      },
-      posts: [
-        {
-          id: 0,
-          data: {
-            author: 'Arthur',
-            date: '12-12-2012',
-            message: 'Yo guys. What\'s up?'
-          }
-        },
-        {
-          id: 1,
-          data: {
-            author: 'Arturo',
-            date: '12-13-2012',
-            message: 'Notmuchyou?'
-          }
+  static allThreads = [];
+
+  static PlaceHolderPosts = [
+    [
+      {
+        id: 0,
+        data: {
+          author: 'Arthur',
+          date: '12-12-2012',
+          message: 'Yo guys. What\'s up?'
         }
-      ]
-    },
-    {
-      id: 1,
-      data: {
-        title: 'Woah guys',
-        category: 1,
       },
-      posts: [
-        {
-          id: 0,
-          data: {
-            author: 'suprisedperson',
-            date: '12-13-2050',
-            message: 'Guys! Guys! I\'m in the future!!!!!'
-          }
+      {
+        id: 1,
+        data: {
+          author: 'Arturo',
+          date: '12-13-2012',
+          message: 'Notmuchyou?'
         }
-      ]
-    }
+      }
+    ],
+    [
+      {
+        id: 1,
+        data: {
+          author: 'Futuro',
+          date: '12-13-2045',
+          message: 'I\'m in the future!'
+        }
+      }
+    ]
   ];
 
+  static PlaceHolderThreads = [
+    new Thread({
+      category: 0,
+      title: 'Sup?',
+      placeholder: true
+    }),
+    new Thread({
+      category: 1,
+      title: 'Woah Guys',
+      placeholder: true
+    })
+  ];
 
-  data: Object = {};
-  posts = [];
+  data: Object;
   id: number;
-  constructor(threadData) {
-    this.data = threadData;
+  posts: Object[];
+
+  static find(id) {
+    return Thread.allThreads[id];
   }
 
-  // save() {
-  //   this.id = Thread.allThreads.length;
-  //   Thread.allThreads.push(this);
-  // }
+  constructor(threadData) {
+    this.data = threadData;
+    if (threadData.placeholder) {
+      this.save();
+      this.posts = Thread.PlaceHolderPosts[this.id];
 
-  post(postData) {
+    }
+  }
+
+  save() {
+    this.id = Thread.allThreads.length;
+    Thread.allThreads.push(this);
+  }
+
+  makePost(postData) {
     this.posts.push({
       id: this.posts.length,
       data: postData

@@ -10,7 +10,5 @@ export class ThreadsComponent implements OnInit {
 
   threads = Thread.allThreads;
   constructor() { }
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
