@@ -40,3 +40,15 @@
 .light {
   font-weight: 200;
 }
+
+.button {
+  border-radius: 3px;
+  border: 1px solid #666;
+  padding: 20px;
+  background-image: linear-gradient(pink,red);
+  color: white;
+}
+.button:hover {
+  background-image: linear-gradient(red,darkred);
+
+}

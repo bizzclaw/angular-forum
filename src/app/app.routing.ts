@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { ThreadsComponent } from './threads/threads.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'posts/:id',
     component: PostsComponent
+  },
+  {
+    path: 'post-form/:threadid/:postid',
+    component: PostFormComponent
   }
 ];
 
