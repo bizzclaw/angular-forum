@@ -24,6 +24,12 @@ export class PostFormComponent implements OnInit {
       this.threadId = (threadId != 'newthread' ? threadId : null);
       this.postId = (postId != 'newpost' ? postId : null);
 
+      if (this.threadId && this.postId) {
+        let thread = Thread.find(this.threadId)
+        let post = thread.findPost(this.postId)
+        this.message = (post && post.data) ? post.data.message : "";
+      }
+
     });
   }
 
