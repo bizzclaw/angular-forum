@@ -3,4 +3,4 @@
   <input *ngIf="!threadId" [(ngModel)]="title" class="input" type="text" placeholder="Title"><br>
   <textarea [(ngModel)]="message" class="input input-big" type="text" placeholder="Message" resize=false></textarea>
 </div>
-<button (click)="submitPost()">Submit (to me!)</button>
+<button class="button" (click)="submitPost()">Submit (to me!)</button>

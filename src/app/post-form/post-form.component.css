@@ -6,8 +6,21 @@
   font-size: 12px;
   font-weight: 400;
 }
+
 .input-big {
   height: 100px;
   width: 500px;
   resize: none;
+}
+
+.button {
+  border-radius: 3px;
+  border: 1px solid #666;
+  padding: 10px 20px;
+  background-image: linear-gradient(#538cc6,#369);
+  color: white;
+}
+
+.button:hover {
+  background-image: linear-gradient(#369,#036);
 }

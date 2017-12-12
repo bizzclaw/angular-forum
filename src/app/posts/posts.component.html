@@ -16,8 +16,8 @@
     </div>
     <div class="post-message">
       <p>{{post.data.message}}</p>
+      <a [routerLink]="['/post-form', id, post.id]"><button class="button edit">Edit</button></a>
     </div>
-    <a [routerLink]="['/post-form', id, post.id]"><button class="button">Edit</button></a>
   </div>
 </div>
 
